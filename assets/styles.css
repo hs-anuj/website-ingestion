@@ -1,0 +1,91 @@
+:root {
+  --bg: #f6f3ee;
+  --ink: #1c1917;
+  --muted: #57534e;
+  --accent: #0f766e;
+  --card: #ffffff;
+  --line: #e7e5e4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.site-header, main, footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+nav a {
+  margin-left: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+nav a:hover { text-decoration: underline; }
+
+h1, h2, h3 { line-height: 1.25; }
+
+.card-list {
+  list-style: none;
+  padding: 0;
+}
+
+.card-list li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.card-list a { color: var(--accent); font-weight: 600; }
+
+.muted { color: var(--muted); font-size: 0.95rem; }
+
+.warning {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+
+details {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.9em;
+}

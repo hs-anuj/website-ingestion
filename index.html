@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acme Support — Demo Help Centre</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand">Acme Support Lab</p>
+    <nav>
+      <a href="./">Home</a>
+      <a href="./faq/">FAQ</a>
+      <a href="./robots.txt">robots.txt</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Help Centre (demo site)</h1>
+    <p>
+      Synthetic documentation for crawler and knowledge-ingest experiments.
+      Edit pages in the GitHub repo, push, and refresh your ingest job.
+    </p>
+
+    <h2>Pages</h2>
+    <ul class="card-list">
+      <li><a href="./faq/refunds/">Refunds policy</a> — standard article</li>
+      <li><a href="./faq/shipping/">Shipping times</a> — second article</li>
+      <li><a href="./faq/hidden-notes/">Hidden notes</a> — hidden / commented text</li>
+      <li><a href="./faq/pii-sample/">PII sample</a> — fake personal data only</li>
+      <li><a href="./faq/with-links/">Links mix</a> — public vs internal-looking URLs</li>
+      <li><a href="./go-external/">External redirect</a> — leaves this host</li>
+      <li><a href="./go-internal/">Internal redirect</a> — stays on this host</li>
+      <li><a href="./faq/accordion/">Accordion FAQ</a> — expandable content</li>
+    </ul>
+
+    <h2>Verification helper</h2>
+    <ul>
+      <li>File: <a href="./.well-known/site-verification.txt"><code>/.well-known/site-verification.txt</code></a></li>
+    </ul>
+    <!-- Optional meta tag if your tool supports it:
+    <meta name="site-verification" content="TOKEN" />
+    -->
+  </main>
+
+  <footer>
+    <p>Synthetic content for testing. Not a real product.</p>
+  </footer>
+</body>
+</html>

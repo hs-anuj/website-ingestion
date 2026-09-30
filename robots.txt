@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# For testing robots behaviour, temporarily change to:
+# Disallow: /faq/hidden-notes/
