@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>&lt;script&gt;alert('WI11-TITLE')&lt;/script&gt; XSS sample</title>
+  <link rel="stylesheet" href="../../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand">Acme Support Lab</p>
+    <nav><a href="../../">Home</a><a href="../">FAQ</a></nav>
+  </header>
+  <main>
+    <h1>XSS sample page</h1>
+    <p>
+      This page holds synthetic markup for admin preview safety checks.
+      Marker: <code>WI11-XSS-PAGE-OK</code>
+    </p>
+
+    <h2>Inline script (should never run in admin)</h2>
+    <script>window.__WI11 = 'WI11-SCRIPT-RAN'; alert('WI11-BODY-SCRIPT');</script>
+
+    <h2>Image handler</h2>
+    <p>
+      <img src="x" onerror="alert('WI11-IMG-ONERROR')" alt="broken" />
+    </p>
+
+    <h2>Anchor javascript URL</h2>
+    <p>
+      <a href="javascript:alert('WI11-JS-HREF')">click me</a>
+    </p>
+
+    <h2>Plain text that looks like HTML</h2>
+    <p>
+      Visible string for extract checks:
+      &lt;img src=x onerror=alert('WI11-ESCAPED')&gt;
+      and token <code>WI11-PLAIN-OK</code>
+    </p>
+  </main>
+</body>
+</html>
