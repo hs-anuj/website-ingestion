@@ -2,15 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0; url=https://example.com/" />
-  <title>External redirect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leave this site</title>
   <link rel="stylesheet" href="../assets/styles.css" />
+  <!-- Meta refresh: some crawlers treat this like a redirect. GitHub Pages cannot send HTTP 302. -->
+  <meta http-equiv="refresh" content="0; url=https://example.com/" />
 </head>
 <body>
+  <header class="site-header">
+    <p class="brand">Acme Support Lab</p>
+    <nav><a href="../">Home</a></nav>
+  </header>
   <main>
-    <h1>Redirecting off-site</h1>
-    <p>If you are not redirected, <a href="https://example.com/">go to example.com</a>.</p>
-    <p class="muted">Security test: crawler should not ingest example.com as part of this verified host.</p>
+    <h1>Off-site jump</h1>
+    <p>This page stays on the lab host. The next hop is a different website.</p>
+    <p><a href="https://example.com/">Continue</a></p>
+    <p class="muted">Marker for this lab page only: WI04-ON-LAB-OK</p>
   </main>
+  <script>
+    window.location.replace("https://example.com/");
+  </script>
 </body>
 </html>
